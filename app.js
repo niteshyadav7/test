@@ -13,9 +13,9 @@ app.use(express.json());
 Connection(
   "mongodb+srv://nitesh0709yadav:nitesh0709yadav@cluster0.ctp026m.mongodb.net/?retryWrites=true&w=majorityesrew"
 );
-app.get("/", (req, res) => {
-  res.json("Hello!");
-});
+// app.get("/", (req, res) => {
+//   res.json("Hello!");
+// });
 
 app.use("/api", userRouter);
 
