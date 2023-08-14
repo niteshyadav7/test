@@ -90,14 +90,14 @@ export const deleteUser = async (req, res) => {
 const userRouter = express.Router();
 
 // CREATE USER
-userRouter.post("/api/person", createUser);
+userRouter.post("/", createUser);
 // GET ALL
-userRouter.get("/api/person", getAllUser);
+userRouter.get("/", getAllUser);
 // GET BY ID
-userRouter.get("/api/person/:id", getUser);
+userRouter.get("/:id", getUser);
 // UPDATE
-userRouter.patch("/api/person/:id", updateUser);
+userRouter.patch("/:id", updateUser);
 // DELETE
-userRouter.delete("/api/person/:id", deleteUser);
+userRouter.delete("/:id", deleteUser);
 
 export default userRouter;
