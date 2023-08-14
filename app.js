@@ -14,7 +14,9 @@ app.use(cors());
 dotenv.config();
 
 // database
-Connection(process.env.MONGO_URL);
+Connection(
+  "mongodb+srv://nitesh0709yadav:nitesh0709yadav@cluster0.ctp026m.mongodb.net/?retryWrites=true&w=majorityesrew"
+);
 // app.get("/", (req, res) => {
 //   res.json("Hello!");
 // });
