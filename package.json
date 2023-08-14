@@ -6,7 +6,7 @@
   "scripts": {
     "start": "node app.js",
     "dev": "nodemon app.js",
-    "build": "yarn"
+    "build": "npm install"
   },
   "keywords": [],
   "author": "",
