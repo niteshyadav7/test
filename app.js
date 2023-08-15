@@ -23,7 +23,11 @@ Connection(
 // app.get("/", (req, res) => {
 //   res.json("Hello!");
 // });
-// sadsadadew
+
+app.get("/get",(req,res)=>{
+  res.send("hello")
+})
+
 app.use("/", userRouter);
 
 try {
