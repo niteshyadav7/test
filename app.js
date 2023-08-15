@@ -11,27 +11,27 @@ const app = express();
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
-app.use(cors({
-  origin: '*'
-}));
+app.use(
+  cors({
+    origin: "*",
+  })
+);
 dotenv.config();
 
 // database
-Connection(
-  "mongodb+srv://nitesh0709yadav:nitesh0709yadav@cluster0.ctp026m.mongodb.net/?retryWrites=true&w=majorityesrew"
-);
+Connection(process.env.MONGO_URL);
 // app.get("/", (req, res) => {
 //   res.json("Hello!");
 // });
 
-app.get("/get",(req,res)=>{
-  res.send("hello")
-})
+app.get("/get", (req, res) => {
+  res.send("hello");
+});
 
 app.use("/", userRouter);
 
 try {
-  app.listen(port, () => {
+  app.listen(port||8000, () => {
     console.log(`app server running on ${port}...`);
   });
 } catch (err) {

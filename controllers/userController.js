@@ -9,7 +9,7 @@ export const createUser = async (req, res) => {
     res.status(404).json({
       status: "fail",
       data: {
-        message: "Fail to added",
+        message: err,
       },
     });
   }
