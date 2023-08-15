@@ -4,7 +4,7 @@ import User from "../models/userSchema.js";
 export const createUser = async (req, res) => {
   try {
     const user = await User.create(req.body);
-    res.send("Data Added!");
+    res.json("Data Added!");
   } catch (err) {
     res.status(404).json({
       status: "fail",
