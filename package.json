@@ -5,8 +5,9 @@
   "type": "module",
   "main": "app.js",
   "scripts": {
-    "build": "grunt build"
-},
+    "start": "node app.js",
+    "test": "nodemon app.js"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
